@@ -12,6 +12,8 @@ function App() {
 
       <Feed />
 
+      <Widgets />
+      
     </div>
   );
 }

@@ -15,20 +15,22 @@ import { Button } from "@mui/material";
 
 function Sidebar() {
     return (
-        <div className="sidebar">
-            <TwitterIcon className="sidebar_twitterIcon"/>
+      <div className="sidebar">
+        <TwitterIcon className="sidebar_twitterIcon" />
 
-            <SidebarOption text="Home" Icon={HomeIcon}/>
-            <SidebarOption text="Explore" Icon={HashtagIcon}/>
-            <SidebarOption text="Notifications" Icon={NotificationsNoneIcon}/>
-            <SidebarOption text="Messages" Icon={MailOutlineIcon}/>
-            <SidebarOption text="Bookmarks" Icon={BookmarkBorderIcon}/>
-            <SidebarOption text="Lists" Icon={ListAltIcon}/>
-            <SidebarOption text="Profile" Icon={PermIdentityIcon}/>
-            <SidebarOption text="More" Icon={MoreHorizIcon}/>
-            
-            <Button variant="outlined" className="sidebar_tweet" fullWidth>Tweet</Button>
-        </div>
+        <SidebarOption text="Home" Icon={HomeIcon} />
+        <SidebarOption text="Explore" Icon={HashtagIcon} />
+        <SidebarOption text="Notifications" Icon={NotificationsNoneIcon} />
+        <SidebarOption text="Messages" Icon={MailOutlineIcon} />
+        <SidebarOption text="Bookmarks" Icon={BookmarkBorderIcon} />
+        <SidebarOption text="Lists" Icon={ListAltIcon} />
+        <SidebarOption text="Profile" Icon={PermIdentityIcon} />
+        <SidebarOption text="More" Icon={MoreHorizIcon} />
+
+        <Button variant="outlined" className="sidebar_tweet" fullWidth>
+          Tweet
+        </Button>
+      </div>
     );
 }
 
