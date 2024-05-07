@@ -3,6 +3,7 @@
     align-items: flex-start;
     border-bottom: 1px solid var(--twitter-background);
     padding-bottom: 10px;
+    width: 100%;
   }
   
   .post__body {
@@ -23,11 +24,13 @@
   .post__headerDescription {
     margin-bottom: 10px;
     font-size: 15px;
+    font-family: "GT";
   }
   
   .post__headerText > h3 {
     font-size: 15px;
     margin-bottom: 5px;
+    font-family: "GT";
   }
   
   .post__badge {
@@ -39,8 +42,15 @@
     font-weight: 600;
     font-size: 12px;
     color: gray;
+    font-family: "GT";
   }
   
   .post__avatar {
     padding: 20px;
+  }
+  .post :hover {
+    background-color: lightgrey;
+  }
+  .post__header {
+    flex-direction: row;
   }

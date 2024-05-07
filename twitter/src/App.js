@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "./fonts/GT-America-Standard-Regular.ttf";
 import Sidebar from "./Sidebar";
 import Feed from './Feed';
 import Widgets from "./Widgets";

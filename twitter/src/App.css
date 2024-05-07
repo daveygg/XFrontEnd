@@ -9,3 +9,9 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+
+@font-face {
+    font-family: "GT";   /*Can be any text*/
+    src: local("GT-America-Standard-Regular"),
+      url("./fonts/GT-America-Standard-Regular.ttf") format("truetype");
+  }

@@ -5,9 +5,9 @@
 }
 
 .sidebarOption:hover {
-    background-color: #e8f5fe;
+    /*background-color: #e8f5fe;*/
+    background-color: rgb(215, 219, 220);
     border-radius: 30px;
-    color: var(--twitter-color);
     transition: color 100ms ease-out;
 }
 
@@ -16,9 +16,10 @@
 }
 
 .sidebarOption > h2 {
-    font-weight: 800;
+    font-weight: 400;
     font-size: 20px;
     margin-right: 20px;
+    font-family: "GT";
 }
 .sidebarOption--active {
     color: var(--twitter-color);

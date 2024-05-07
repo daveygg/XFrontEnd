@@ -6,11 +6,11 @@ import HomeIcon from '@mui/icons-material/Home';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-import HashtagIcon from '@mui/icons-material/Tag';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import { Button } from "@mui/material";
+import SearchIcon from '@mui/icons-material/Search';
 
 
 function Sidebar() {
@@ -19,7 +19,7 @@ function Sidebar() {
         <TwitterIcon className="sidebar_twitterIcon" />
 
         <SidebarOption text="Home" Icon={HomeIcon} />
-        <SidebarOption text="Explore" Icon={HashtagIcon} />
+        <SidebarOption text="Explore" Icon={SearchIcon} />
         <SidebarOption text="Notifications" Icon={NotificationsNoneIcon} />
         <SidebarOption text="Messages" Icon={MailOutlineIcon} />
         <SidebarOption text="Bookmarks" Icon={BookmarkBorderIcon} />
