@@ -8,7 +8,7 @@ import FavoriteBorderIcon from "@mui/icons-material//FavoriteBorder";
 import PublishIcon from "@mui/icons-material//Publish";
 import { Article } from '@mui/icons-material';
 import BarChartIcon from '@mui/icons-material/BarChart';
-
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 const Post = forwardRef(
   ({ displayName, username, verified, text, image, avatar }, ref) => {
     return (
@@ -23,13 +23,18 @@ const Post = forwardRef(
           <div className="post__body">
             <div className="post__header">
               <div className="post__headerText">
-                <h3>
-                  {displayName}
-                  <span className="post__headerSpecial">
-                    {verified && <VerifiedUserIcon className="post__badge" />}@
-                    {username}
-                  </span>
-                </h3>
+                <div className="post__headerTextLeft">
+                  <h3>
+                    <span className="displayName">{displayName}</span>
+                    <span className="post__headerSpecial">
+                      {verified && <VerifiedUserIcon className="post__badge" />}
+                      @{username} &#183; 2h
+                    </span>
+                  </h3>
+                </div>
+                <div className="buttonContainer">
+                  <MoreHorizIcon className="moreButton" />
+                </div>
               </div>
               <div className="post__headerDescription">
                 <p>{text}</p>
@@ -38,13 +43,19 @@ const Post = forwardRef(
             <img src={image} alt="" />
             <div className="post__footer">
               <div className="commentButtonContainer">
-                <ChatBubbleOutlineIcon className='commentButtonIcon' fontSize="small" />
+                <ChatBubbleOutlineIcon
+                  className="commentButtonIcon"
+                  fontSize="small"
+                />
               </div>
               <div className="retweetButtonContainer">
                 <RepeatIcon className="retweetButtonIcon" fontSize="small" />
               </div>
               <div className="likeButtonContainer">
-                <FavoriteBorderIcon className="likeButtonIcon" fontSize="small" />
+                <FavoriteBorderIcon
+                  className="likeButtonIcon"
+                  fontSize="small"
+                />
               </div>
               <div className="viewsButtonContainer">
                 <BarChartIcon className="viewsButtonIcon" fontSize="small" />

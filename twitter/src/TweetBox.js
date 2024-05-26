@@ -4,6 +4,8 @@ import { Avatar, Button, responsiveFontSizes } from '@mui/material';
 import db from './Firebase';
 import { setDoc, doc, collection } from "firebase/firestore";
 import axios from 'axios';
+import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
+import ExpandingTextBox from './ExpandingTextBox';
 
 function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState("");
@@ -76,20 +78,22 @@ function TweetBox() {
         <form>
           <div className="tweetBox__input">
             <Avatar src="https://picsum.photos/200/300?random=1" />
-            <input 
+            {/* <input 
             placeholder="What's happening?" 
             type='text'
             onChange={e => setTweetMessage(e.target.value)}
             value={tweetMessage}
-            />
+            /> */}
+            <ExpandingTextBox />
           </div>
-          <input
+          {/* <input
             placeholder="Optional: Enter image URL"
             className="tweetBox__imageInput"
             onChange={e => setTweetImage(e.target.value)}
             value={tweetImage}
-          />
-          <Button type='submit' onClick={sendTweet2} className="tweetBox__tweetButton">Tweet</Button>
+          /> */}
+          <InsertPhotoIcon className='PhotoIcon' />
+          <Button type='submit' onClick={sendTweet2} className="tweetBox__tweetButton">Post</Button>
         </form>
       </div>
   );

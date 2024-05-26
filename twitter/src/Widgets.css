@@ -18,12 +18,6 @@
     background-color: var(--twitter-background);
     border: none;
     outline: none;
-    &:focus{
-      .widgets__input{
-        border-color: var(--twitter-color);
-        background-color:white;
-      }      
-    }
   }
   
   .widgets__searchIcon {
@@ -38,6 +32,8 @@
     border-radius: 16px;
     border-color: rgb(239, 243, 244);
   }
+
+
   
   .widgets__widgetContainer > h2 {
     font-size: 18px;

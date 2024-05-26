@@ -9,6 +9,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Happening from "./Happening";
 import TopHappening from "./TopHappening";
 import ShowMore from "./ShowMore";
+import WhoToFollow from "./WhoToFollow"
 
 function Widgets() {
   return (
@@ -26,8 +27,12 @@ function Widgets() {
         <ShowMore />       
       </div>
 
-      <div className="whoToFollowContainer">
-        
+      <div className="widgets__widgetContainer">
+        <h2>Who to follow</h2>
+        <WhoToFollow userName="DavidGilchrist" displayName="David Gilchrist" avatar="https://picsum.photos/100/100"/>
+        <WhoToFollow userName="GregJames" displayName="Greg James" avatar="https://picsum.photos/80/80"/>
+        <WhoToFollow userName="JillJones" displayName="Jill Jones" avatar="https://picsum.photos/110/110"/>
+        <ShowMore />
       </div>
     </div>
   );

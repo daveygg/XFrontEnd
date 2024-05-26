@@ -11,18 +11,36 @@
   .post__body {
     flex: 1;
     padding: 10px;
+    margin-top: 5px;
   }
   
   .post__body > img {
     border-radius: 20px;
   }
-  
+  .ButtonContainer {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .buttonContainer:hover .moreButton {
+    transition-duration: 0.1s;
+    color: rgba(29, 155, 240, 1);
+    background-color: rgba(29, 155, 240, 0.1);
+    border-radius: 50%;
+}
   .post__footer {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
   }
-  
+  .post__headerText{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
   .post__headerDescription {
     margin-bottom: 10px;
     font-size: 15px;
@@ -33,8 +51,13 @@
     font-size: 15px;
     margin-bottom: 5px;
     font-family: "GT";
+    font-weight: 700;
   }
-  
+  .displayName {
+    &:hover{
+      text-decoration: underline;
+    }
+  }
   .post__badge {
     margin-left: 2px !important;
     margin-right: 2px;
@@ -51,7 +74,9 @@
   }
   
   .post__avatar {
-    padding: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+
   }
 
   .post__header {

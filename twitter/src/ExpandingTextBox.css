@@ -1,0 +1,23 @@
+.expanding-textbox {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .expanding-textbox textarea {
+    min-width: 100px; /* Set a minimum width */
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-family: inherit;
+    resize: none; /* Disable default resize functionality */
+    overflow: hidden; /* Hide scrollbar until needed */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    transition: width 0.1s ease-in-out; /* Smooth width transition */
+  }
+  
+  .expanding-textbox textarea:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
+  .expanding-textbox textarea::-webkit-scrollbar { /* Hide scrollbar on Chrome/Safari */
+    display: none;
+  }

@@ -40,6 +40,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+.moreButton {
+    margin-right: 10px;
+}
 .buttonContainer:hover .moreButton {
     transition-duration: 0.1s;
     color: rgba(29, 155, 240, 1);
