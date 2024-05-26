@@ -1,7 +1,7 @@
 import React from "react";
 import './Sidebar.css';
 import SidebarOption from "./SidebarOption";
-import TwitterIcon from '@mui/icons-material/Twitter';
+import XIcon from '@mui/icons-material/X';
 import HomeIcon from '@mui/icons-material/Home';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
@@ -16,7 +16,7 @@ import SearchIcon from '@mui/icons-material/Search';
 function Sidebar() {
     return (
       <div className="sidebar">
-        <TwitterIcon className="sidebar_twitterIcon" />
+        <XIcon className="sidebar__xIcon" />
 
         <SidebarOption text="Home" Icon={HomeIcon} />
         <SidebarOption text="Explore" Icon={SearchIcon} />
@@ -28,7 +28,7 @@ function Sidebar() {
         <SidebarOption text="More" Icon={MoreHorizIcon} />
 
         <Button variant="outlined" className="sidebar_tweet" fullWidth>
-          Tweet
+          Post
         </Button>
       </div>
     );

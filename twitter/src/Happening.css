@@ -1,0 +1,49 @@
+.happening {
+    display: flex;
+}
+.happeningText {
+    cursor: pointer;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.happening:hover {
+    transition-duration: 0.1s;
+    background-color: #f5f5f5;
+    
+}
+.happeningTopic {
+    margin-top: -10px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.happeningCategory {
+    margin-left: 10px;
+    font-size: 13px;
+    color: gray;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+.ButtonContainer {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonContainer:hover .moreButton {
+    transition-duration: 0.1s;
+    color: rgba(29, 155, 240, 1);
+    background-color: rgba(29, 155, 240, 0.1);
+    border-radius: 50%;
+}
+.amountOfInteractions {
+    margin-left: 10px;
+    font-size: 13px;
+    color: gray;
+    margin-bottom: 10px;
+}

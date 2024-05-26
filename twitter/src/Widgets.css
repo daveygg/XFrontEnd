@@ -10,11 +10,20 @@
     border-radius: 20px;
     margin-top: 10px;
     margin-left: 20px;
+    
   }
   
   .widgets__input > input {
     border: none;
     background-color: var(--twitter-background);
+    border: none;
+    outline: none;
+    &:focus{
+      .widgets__input{
+        border-color: var(--twitter-color);
+        background-color:white;
+      }      
+    }
   }
   
   .widgets__searchIcon {
@@ -22,15 +31,20 @@
   }
   
   .widgets__widgetContainer {
-    margin-top: 15px;
     margin-left: 20px;
-    padding: 20px;
-    background-color: #f5f8fa;
-    border-radius: 20px;
+    border-width: 1px;
+    border: solid;
+    margin-top: 15px;
+    border-radius: 16px;
+    border-color: rgb(239, 243, 244);
   }
   
   .widgets__widgetContainer > h2 {
     font-size: 18px;
     font-weight: 800;
     font-family: "GT";
+    margin-top: 12px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 12px;
   }

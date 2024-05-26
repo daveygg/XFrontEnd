@@ -4,6 +4,8 @@
     border-bottom: 1px solid var(--twitter-background);
     padding-bottom: 10px;
     width: 100%;
+    background-color: rgba(255,255,255);
+    cursor: pointer;
   }
   
   .post__body {
@@ -34,13 +36,16 @@
   }
   
   .post__badge {
+    margin-left: 2px !important;
+    margin-right: 2px;
+    margin-bottom: -2px !important;
     font-size: 14px !important;
     color: var(--twitter-color);
   }
   
   .post__headerSpecial {
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: 400;
+    font-size: 15px;
     color: gray;
     font-family: "GT";
   }
@@ -48,9 +53,92 @@
   .post__avatar {
     padding: 20px;
   }
-  .post :hover {
-    background-color: lightgrey;
-  }
+
   .post__header {
     flex-direction: row;
+  }
+  .flexDiv {
+    flex-grow: 1;
+  }
+  article :hover{
+    transition-duration: 0.1s;
+    background-color: #f5f5f5;
+  }
+
+  .viewsButton :hover {
+    transition-duration: 0.1s;
+    color: var(--twitter-color);
+  }
+
+  .commentButtonIcon {
+    padding: 5px;
+  }
+  .retweetButtonIcon {
+    padding: 5px;
+  }
+  .likeButtonIcon {
+    padding: 5px;
+  }
+  .viewsButtonIcon {
+    padding: 5px;
+  }
+
+  .commentButtonContainer {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .commentButtonContainer:hover .commentButtonIcon {
+    transition-duration: 0.1s;
+    color: rgba(29, 155, 240, 1);
+    background-color: rgba(29, 155, 240, 0.1);
+    border-radius: 50%;
+  }
+  .likeButtonContainer {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .likeButtonContainer:hover .likeButtonIcon {
+    transition-duration: 0.1s;
+    color: rgba(249, 24, 128, 1);
+    background-color: rgba(249, 24, 128, 0.1);
+    border-radius: 50%;
+  }
+  .retweetButtonContainer {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .retweetButtonContainer:hover .retweetButtonIcon {
+    transition-duration: 0.1s;
+    color: rgba(0, 186, 124, 1);
+    background-color: rgba(0, 186, 124, 0.1);
+    border-radius: 50%;
+  }
+  .viewsButtonContainer {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .viewsButtonContainer:hover .viewsButtonIcon {
+    transition-duration: 0.1s;
+    color: rgba(29, 155, 240, 1);
+    background-color: rgba(29, 155, 240, 0.1);
+    border-radius: 50%;
   }

@@ -8,6 +8,7 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import FlipMove from "react-flip-move";
+import Button from "./Button";
 
 function Feed() {
   const [posts, setPosts] = useState([]);
@@ -30,8 +31,6 @@ function Feed() {
 
 
         <TweetBox />
-
-        <FlipMove>
         {posts.map((post) => (
           <Post
             key={post.text}
@@ -43,7 +42,6 @@ function Feed() {
             image={post.image}
           />
         ))}
-      </FlipMove>
         
 
         
