@@ -1,17 +1,19 @@
 .expanding-textbox {
     position: relative;
-    display: inline-block;
+    display: flex;    
   }
   
   .expanding-textbox textarea {
-    min-width: 100px; /* Set a minimum width */
-    border: 1px solid #ccc;
+    width: 100%; /* Set a minimum width */
+    border: none;
     padding: 5px;
     font-family: inherit;
     resize: none; /* Disable default resize functionality */
     overflow: hidden; /* Hide scrollbar until needed */
     box-sizing: border-box; /* Ensure padding is included in width */
     transition: width 0.1s ease-in-out; /* Smooth width transition */
+    line-height: 24px;
+    font-size: 20px;
   }
   
   .expanding-textbox textarea:focus {
@@ -20,4 +22,11 @@
   
   .expanding-textbox textarea::-webkit-scrollbar { /* Hide scrollbar on Chrome/Safari */
     display: none;
+  }
+
+  .expanding-textbox textarea::placeholder {
+    font-size: 20px;
+    font-weight: 400;
+    color: gray;
+    line-height: 24px;
   }

@@ -16,7 +16,7 @@ const ExpandingTextBox = () => {
 
   return (
     <div className="expanding-textbox">
-      <textarea value={value} onChange={handleChange} />
+      <textarea value={value} onChange={handleChange} placeholder='What is happening?!'/>
     </div>
   );
 };

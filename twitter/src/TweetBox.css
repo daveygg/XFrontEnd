@@ -2,34 +2,70 @@
     padding-bottom: 10px;
     border-bottom: 1px solid var(--twitter-background);
     padding-right: 10px;
+    display: flex;
   }
-  
   .tweetBox > form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
   }
-  
+  .tweetBoxIconContainer {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .tweetBoxIconContainer:hover .tweetBoxIcon {
+    transition-duration: 0.1s;
+    color: rgba(29, 155, 240, 1);
+    background-color: rgba(29, 155, 240, 0.1);
+    border-radius: 50%;
+  }
+  .tweetBoxIcon {
+    padding: 5px;
+  }
+
   .tweetBox__input {
+    padding-top: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid var(--twitter-background);
+    padding-bottom: 20px;
+    margin-right: 10px;
+  }
+  .tweetBoxInputStuff {
+    width: 100%;
+    flex:1;
+  }
+  .tweetBoxButtons {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center !important;
+    width: 100%;
+    padding-top: 10px;
+  }
+  .tweetBoxAvatar {
     padding: 20px;
+    padding-right: 10px;
+  }
+  .tweetBoxTopRow {
     display: flex;
   }
-  
-  .tweetBox__input > input {
-    flex: 1;
-    margin-left: 20px;
-    font-size: 20px;
-    border: none;
-    outline: none;
+  .tweetBoxButtonsIcons {
+    display: flex;
+    flex-direction: row;
+    flex: 0.5;
+    justify-content: space-between;
   }
-  
-  .tweetBox__imageInput {
-    border: none;
-    padding: 10px;
-  }
-  .PhotoIcon {
+  .tweetBoxIcon {
     color: var(--twitter-color);
+    font-size: 20px !important;
+    font-weight: 50 !important;
   }
-  
   .tweetBox__tweetButton {
     background-color: var(--twitter-color) !important;
     border: none !important;
@@ -39,8 +75,8 @@
     border-radius: 30px !important;
     width: 80px;
     height: 40px !important;
-    margin-top: 20px !important;
     margin-left: auto !important;
+    align-items: center !important;
   }
   .tweetBox__tweetButton:hover{
     background-color: rgb(26,140,216) !important;

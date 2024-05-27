@@ -9,16 +9,35 @@ import {
 } from "firebase/firestore";
 import FlipMove from "react-flip-move";
 import Button from "./Button";
+import axios from 'axios';
 
 function Feed() {
   const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    const unsubscribe = onSnapshot(collection(db, "posts"), (snapshot) => {
-      setPosts(snapshot.docs.map((doc) => doc.data()));
-    });
 
-    return () => unsubscribe();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const config = {
+          method: 'get',
+          url: 'http://localhost:5175/api/posts',
+          headders: {
+            'Content-Type': 'application/json'
+          }
+        };
+        const response = await axios(config);
+        const fetchedPosts = response.data;
+        console.log('fetchedPosts:', fetchedPosts);
+        setPosts(fetchedPosts);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      }
+    };
+  
+    fetchData();
+  
+    // Cleanup function (optional)
+    return () => {};
   }, []);
   
 
@@ -33,13 +52,13 @@ function Feed() {
         <TweetBox />
         {posts.map((post) => (
           <Post
-            key={post.text}
+            key={post.id}
             displayName={post.displayName}
-            username={post.username}
-            verified={post.verified}
-            text={post.text}
-            avatar={post.avatar}
-            image={post.image}
+            username={post.userName}
+            verified="true"
+            text={post.content}
+            avatar={post.avatarUrl}
+            image={post.imageUrl}
           />
         ))}
         
