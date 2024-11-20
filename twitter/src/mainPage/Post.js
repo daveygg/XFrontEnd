@@ -5,8 +5,6 @@ import VerifiedUserIcon from "@mui/icons-material//VerifiedUser";
 import ChatBubbleOutlineIcon from "@mui/icons-material//ChatBubbleOutline";
 import RepeatIcon from "@mui/icons-material//Repeat";
 import FavoriteBorderIcon from "@mui/icons-material//FavoriteBorder";
-import PublishIcon from "@mui/icons-material//Publish";
-import { Article } from '@mui/icons-material';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 const Post = forwardRef(
@@ -18,7 +16,6 @@ const Post = forwardRef(
             <div className="post__avatar">
               <Avatar src={avatar} />
             </div>
-            <div className="flexDiv"></div>
           </div>
           <div className="post__body">
             <div className="post__header">
@@ -35,30 +32,30 @@ const Post = forwardRef(
                 <div className="buttonContainer">
                   <MoreHorizIcon className="moreButton" />
                 </div>
-              </div>
-              <div className="post__headerDescription">
-                <p>{text}</p>
-              </div>
+              </div>              
             </div>
-            <img src={image} alt="" />
+            <div className="post__headerDescription">
+                <p>{text}</p>
+            </div>
+            <img src={`https://localhost:7108/api/files/${image}`} alt="" />
             <div className="post__footer">
               <div className="commentButtonContainer">
                 <ChatBubbleOutlineIcon
-                  className="commentButtonIcon"
+                  className="ButtonIcon"
                   fontSize="small"
                 />
               </div>
               <div className="retweetButtonContainer">
-                <RepeatIcon className="retweetButtonIcon" fontSize="small" />
+                <RepeatIcon className="ButtonIcon" fontSize="small" />
               </div>
               <div className="likeButtonContainer">
                 <FavoriteBorderIcon
-                  className="likeButtonIcon"
+                  className="ButtonIcon"
                   fontSize="small"
                 />
               </div>
               <div className="viewsButtonContainer">
-                <BarChartIcon className="viewsButtonIcon" fontSize="small" />
+                <BarChartIcon className="ButtonIcon" fontSize="small" />
               </div>
             </div>
           </div>

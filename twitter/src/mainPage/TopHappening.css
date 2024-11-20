@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'Chirp Regular';
+    src: url('../fonts/Chirp-Regular.80fda27a.ttf') format('truetype');
+  }
 .topHappening {
     display: flex;
-    cursor: pointer;    
+    cursor: pointer;
+    font-family: 'Chirp Regular';    
 }
 .topHappeningImage {
     margin-top: 10px;
@@ -11,6 +16,7 @@
     width: 70px;
     height: 70px;
 }
+
 .topHappeningText {
     margin-top: 10px;
     align-items: flex-start;

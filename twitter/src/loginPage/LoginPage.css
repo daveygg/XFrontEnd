@@ -1,0 +1,132 @@
+.loginPage {
+    display: flex;
+    height: 100vh;
+    /* Full viewport height */
+    background-color: black;
+}
+
+.loginPage__leftHalf,
+.loginPage__rightHalf {
+    flex: 1;
+    /* Takes equal space (50% each) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.loginPage__rightHalf {
+    padding: 36px;
+    font-weight: 700;
+    flex-direction: column;
+    align-items: start;
+}
+
+@font-face {
+    font-family: "Chirp-Regular";
+    src: local("Chirp-Regular.80fda27a"),
+      url("../fonts/Chirp-Regular.80fda27a.ttf") format("truetype");
+  }
+
+.loginPage__xIcon {
+    font-size: 300px !important;
+    padding: 0px !important;
+}
+
+.loginPage__happeningNow {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 64px;
+    text-align: left;
+}
+
+.loginPage__joinToday {
+    margin: bottom 32px;
+    font-size: 31px;
+    text-align: left;
+}
+
+.loginPage__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.loginPage__createAccountBtn {
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 700 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 40px !important;
+    margin-top: 10px !important;
+    font-size: 15px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: 300px !important;
+    margin-bottom: 8px !important;
+}
+.loginPage__signInGoogleBtn {
+    background-color: white !important;
+    border: none !important;
+    color: black !important;
+    font-weight: 700 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 40px !important;
+    margin-top: 20px !important;
+    font-size: 15px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: 300px !important;
+    margin-bottom: 8px !important;
+}
+.googleSvg{
+    height: 20px;
+    margin-right: 4px;
+    height: 28px;
+}
+.line-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin: -4px;
+}
+
+.line {
+    flex: 1; /* Take as much space as possible */
+    height: 1px; /* Thin line */
+    background-color: rgb(47, 51, 54);
+    margin: 0 10px; /* Space between the line and the text */
+}
+
+p {
+    margin: 0; /* Remove default margin from the text */
+    padding: 0 10px; /* Optional: Padding around the text */
+}
+
+.loginPage__alreadyAccount{
+    margin-top: 64px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.loginPage__signInBtn {
+    background-color: black !important;
+    border: 1px solid !important;
+    color: var(--twitter-color) !important;
+    font-weight: 700 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 40px !important;
+    margin-top: 10px !important;
+    font-size: 15px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: 300px !important;
+    margin-bottom: 8px !important;
+    border-color: rgb(83, 100, 113) !important;
+}

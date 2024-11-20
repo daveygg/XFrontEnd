@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import "./ExpandingTextBox.css";
 
-const ExpandingTextBox = () => {
+const ExpandingTextBox = ({ onTextChange }) => {
   const [value, setValue] = useState('');
 
   const handleChange = (event) => {
     setValue(event.target.value);
+    onTextChange(event.target.value);
   };
 
   useEffect(() => {

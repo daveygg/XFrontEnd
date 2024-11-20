@@ -1,7 +1,10 @@
 .widgets {
     flex: 0.3;
   }
-  
+  @font-face {
+    font-family: 'Chirp Regular';
+    src: url('../fonts/Chirp-Regular.80fda27a.ttf') format('truetype');
+  }
   .widgets__input {
     display: flex;
     align-items: center;
@@ -10,6 +13,7 @@
     border-radius: 20px;
     margin-top: 10px;
     margin-left: 20px;
+    font-family: 'Chirp Regular';
     
   }
   
@@ -19,15 +23,18 @@
     border: none;
     outline: none;
   }
-  
+  @font-face {
+    font-family: 'Chirp Regular';
+    src: url('../fonts/Chirp-Regular.80fda27a.ttf') format('truetype');
+  }
   .widgets__searchIcon {
     color: gray;
+    font: 'Chirp Regular';
   }
   
   .widgets__widgetContainer {
     margin-left: 20px;
-    border-width: 1px;
-    border: solid;
+    border: 1px solid;
     margin-top: 15px;
     border-radius: 16px;
     border-color: rgb(239, 243, 244);
@@ -38,7 +45,7 @@
   .widgets__widgetContainer > h2 {
     font-size: 18px;
     font-weight: 800;
-    font-family: "GT";
+    font-family: "Chirp-Regular";
     margin-top: 12px;
     margin-left: 16px;
     margin-right: 16px;

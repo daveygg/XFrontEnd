@@ -16,6 +16,7 @@
   
   .post__body > img {
     border-radius: 20px;
+    height: 200px;
   }
   .ButtonContainer {
     width: auto;
@@ -39,18 +40,21 @@
   .post__headerText{
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    
   }
   .post__headerDescription {
     margin-bottom: 10px;
     font-size: 15px;
-    font-family: "GT";
+    font-family: "Chirp Regular";
+    white-space: pre-wrap;
+    max-width: 400px;
+    word-break: break-all;
   }
   
   .post__headerText > h3 {
     font-size: 15px;
     margin-bottom: 5px;
-    font-family: "GT";
+    font-family: "Chirp Regular";
     font-weight: 700;
   }
   .displayName {
@@ -70,7 +74,7 @@
     font-weight: 400;
     font-size: 15px;
     color: gray;
-    font-family: "GT";
+    font-family: "Chirp Regular";
   }
   
   .post__avatar {
@@ -80,7 +84,7 @@
   }
 
   .post__header {
-    flex-direction: row;
+    
   }
   .flexDiv {
     flex-grow: 1;
@@ -95,16 +99,7 @@
     color: var(--twitter-color);
   }
 
-  .commentButtonIcon {
-    padding: 5px;
-  }
-  .retweetButtonIcon {
-    padding: 5px;
-  }
-  .likeButtonIcon {
-    padding: 5px;
-  }
-  .viewsButtonIcon {
+  .ButtonIcon {
     padding: 5px;
   }
 

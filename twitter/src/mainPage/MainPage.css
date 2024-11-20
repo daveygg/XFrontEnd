@@ -2,7 +2,7 @@ body {
     --twitter-color: rgba(29, 155, 240, 1);
     --twitter-background: #e6ecf0;
 }
-.app {
+.mainPage {
     display: flex;
     height: 100vh;
     max-width: 1300px;
@@ -11,7 +11,7 @@ body {
 }
 
 @font-face {
-    font-family: "GT";   /*Can be any text*/
-    src: local("GT-America-Standard-Regular"),
-      url("./fonts/GT-America-Standard-Regular.ttf") format("truetype");
+    font-family: "Chirp Regular";
+    src: local("Chirp-Regular.80fda27a"),
+      url("../fonts/Chirp-Regular.80fda27a.ttf") format("truetype");
   }

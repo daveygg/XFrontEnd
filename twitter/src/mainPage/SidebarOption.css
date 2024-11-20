@@ -19,7 +19,7 @@
     font-weight: 400;
     font-size: 20px;
     margin-right: 20px;
-    font-family: "GT";
+    font-family: "Chirp Regular";
 }
 .sidebarOption--active {
     color: var(--twitter-color);
