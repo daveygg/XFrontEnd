@@ -4,23 +4,25 @@
   }
   
   .expanding-textbox textarea {
-    width: 100%; /* Set a minimum width */
+    width: 100%;
     border: none;
     padding: 5px;
     font-family: inherit;
-    resize: none; /* Disable default resize functionality */
-    overflow: hidden; /* Hide scrollbar until needed */
-    box-sizing: border-box; /* Ensure padding is included in width */
-    transition: width 0.1s ease-in-out; /* Smooth width transition */
+    resize: none;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: width 0.1s ease-in-out;
     line-height: 24px;
     font-size: 20px;
+    background-color: black !important;
+    color: white;
   }
   
   .expanding-textbox textarea:focus {
-    outline: none; /* Remove focus outline */
+    outline: none;
   }
   
-  .expanding-textbox textarea::-webkit-scrollbar { /* Hide scrollbar on Chrome/Safari */
+  .expanding-textbox textarea::-webkit-scrollbar {
     display: none;
   }
 

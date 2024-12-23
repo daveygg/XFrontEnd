@@ -1,5 +1,5 @@
 .widgets {
-    flex: 0.3;
+    flex: 0.35;
   }
   @font-face {
     font-family: 'Chirp Regular';
@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     background-color: var(--twitter-background);
-    padding: 10px;
+    padding: 0px;
     border-radius: 20px;
     margin-top: 10px;
     margin-left: 20px;
@@ -20,9 +20,14 @@
   .widgets__input > input {
     border: none;
     background-color: var(--twitter-background);
-    border: none;
     outline: none;
+    padding: none;
+    color: white;
+    font-size: 15px;
+    height: 42px;
+    margin-left: 20px;
   }
+
   @font-face {
     font-family: 'Chirp Regular';
     src: url('../fonts/Chirp-Regular.80fda27a.ttf') format('truetype');
@@ -30,6 +35,7 @@
   .widgets__searchIcon {
     color: gray;
     font: 'Chirp Regular';
+    margin-left: 20px;
   }
   
   .widgets__widgetContainer {
@@ -37,7 +43,7 @@
     border: 1px solid;
     margin-top: 15px;
     border-radius: 16px;
-    border-color: rgb(239, 243, 244);
+    border-color: var(--twitter-background);
   }
 
 

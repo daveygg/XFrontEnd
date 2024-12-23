@@ -1,9 +1,11 @@
 .sidebar {
-    flex: 0.3;
+    flex: 0.2;
     min-width: 250px;
     margin-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    background-color: black;
+    color:white;
 }
 
 .sidebar_tweet {
@@ -20,7 +22,7 @@
 }
 .sidebar_tweet:hover {
     transition-duration: 0.1s;
-    background-color: rgb(26, 140, 216) !important;
+    background-color: var(--twitter-color)
 }
 .sidebar__xIcon {
     font-size: 30px !important;

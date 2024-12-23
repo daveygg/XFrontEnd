@@ -1,18 +1,28 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .sidebarOption {
-    display:flex;
+    display: inline-flex !important;
     align-items: center;
     cursor: pointer;
+    border-radius: 30px;
+    background-color: black;
 }
 
 .sidebarOption:hover {
     /*background-color: #e8f5fe;*/
-    background-color: rgb(215, 219, 220);
-    border-radius: 30px;
+    background-color: #222222;    
     transition: color 100ms ease-out;
 }
 
 .sidebarOption > .MuiSvgIcon-root {
-    padding: 20px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
 }
 
 .sidebarOption > h2 {
@@ -20,6 +30,8 @@
     font-size: 20px;
     margin-right: 20px;
     font-family: "Chirp Regular";
+    margin: 0;
+    padding-right: 30px;
 }
 .sidebarOption--active {
     color: var(--twitter-color);

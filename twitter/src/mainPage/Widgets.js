@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from 'react';
 import "./Widgets.css";
 import {
   TwitterTimelineEmbed,
@@ -12,11 +12,53 @@ import ShowMore from "./ShowMore";
 import WhoToFollow from "./WhoToFollow"
 
 function Widgets() {
+
+  const inputRef = useRef(null);
+  const searchIconRef = useRef(null);
+  const inputWrapperRef = useRef(null);
+
+  const [focused, setFocused] = useState(false);
+
+  useEffect(() => {
+    const inputElement = inputRef.current;
+    
+    const handleFocus = () => {
+      setFocused(true);
+    };
+
+    const handleBlur = () => {
+      setFocused(false);
+    };
+
+    inputElement.addEventListener('focus', handleFocus);
+    inputElement.addEventListener('blur', handleBlur);
+
+    return () => {
+      inputElement.removeEventListener('focus', handleFocus);
+      inputElement.removeEventListener('blur', handleBlur);
+    };
+  }, []);
+
+  useEffect(() => {
+    
+    if (focused) {
+      searchIconRef.current.style.color = 'rgba(29, 155, 240, 1)';
+      inputWrapperRef.current.style.border = '1px solid rgba(29, 155, 240, 1)';
+      inputWrapperRef.current.style.backgroundColor = 'black';
+      inputRef.current.style.backgroundColor = 'black';
+    } else {
+      searchIconRef.current.style.color = 'gray';
+      inputWrapperRef.current.style.border = 'none';
+      inputWrapperRef.current.style.backgroundColor = 'rgb(47, 51, 54)';
+      inputRef.current.style.backgroundColor = 'rgb(47, 51, 54)';
+    }
+  }, [focused]);
+
   return (
     <div className="widgets">
-      <div className="widgets__input">
-        <SearchIcon className="widgets__searchIcon" />
-        <input placeholder="Search Twitter" type="text" />
+      <div className="widgets__input" ref={inputWrapperRef}>
+        <SearchIcon className="widgets__searchIcon" ref={searchIconRef} />
+        <input placeholder="Search" type="text" ref={inputRef} />
       </div>
 
       <div className="widgets__widgetContainer">

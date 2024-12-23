@@ -32,13 +32,13 @@
 }
 .whoToFollow:hover {
     transition-duration: 0.1s;
-    background-color: #f5f5f5;
+    background-color: #111111;
 }
 .wtfFollowButton {
     display:flex !important;
-    background-color: rgb(15, 20, 25) !important;
+    background-color:rgb(239, 243, 244) !important;
     border: none !important;
-    color: white !important;
+    color: black !important;
     font-weight: 900 !important;
     text-transform: inherit !important;
     border-radius: 30px !important;
@@ -48,9 +48,9 @@
   }
   .wtfFollowButton:hover {
     display:flex !important;
-    background-color: rgb(39, 44, 48) !important;
+    background-color: rgb(220, 224, 225) !important;
     border: none !important;
-    color: white !important;
+    color: black !important;
     font-weight: 900 !important;
     text-transform: inherit !important;
     border-radius: 30px !important;

@@ -4,7 +4,9 @@
     border-bottom: 1px solid var(--twitter-background);
     padding-bottom: 10px;
     width: 100%;
-    background-color: rgba(255,255,255);
+    background-color: black !important;
+    color: white;
+    /* background-color: rgba(255,255,255); */
     cursor: pointer;
   }
   
@@ -37,6 +39,7 @@
     justify-content: space-between;
     margin-top: 20px;
   }
+
   .post__headerText{
     display: flex;
     justify-content: space-between;
@@ -83,15 +86,12 @@
 
   }
 
-  .post__header {
-    
-  }
   .flexDiv {
     flex-grow: 1;
   }
-  article :hover{
+  .post:hover{
     transition-duration: 0.1s;
-    background-color: #f5f5f5;
+    background-color: #111111 !important;
   }
 
   .viewsButton :hover {
@@ -99,10 +99,20 @@
     color: var(--twitter-color);
   }
 
-  .ButtonIcon {
+  .retweetButtonIcon {
     padding: 5px;
   }
 
+  .likeButtonIcon{
+    padding: 5px;
+  }
+  .commentButtonIcon{
+    padding: 5px;
+    overflow: visible;
+  }
+  .viewsButtonIcon {
+    padding: 5px;
+  }
   .commentButtonContainer {
     width: auto;
     height: auto;

@@ -3,6 +3,8 @@
     border-bottom: 1px solid var(--twitter-background);
     padding-right: 10px;
     display: flex;
+    color: white;
+    background-color: black;
   }
   .tweetBox > form {
     display: flex;

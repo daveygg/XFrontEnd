@@ -1,6 +1,6 @@
 body {
     --twitter-color: rgba(29, 155, 240, 1);
-    --twitter-background: #e6ecf0;
+    --twitter-background: rgb(47, 51, 54);
 }
 .mainPage {
     display: flex;
