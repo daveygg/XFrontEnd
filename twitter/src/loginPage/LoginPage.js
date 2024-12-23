@@ -5,20 +5,49 @@ import XIcon from "@mui/icons-material/X";
 import { Button } from "@mui/material";
 
 function LoginPage({ setIsAuthenticated }) {
-  const [isPopupVisible, setIsPopupVisible] = useState(false); // State to control popup visibility
+  const [isLoginPopupVisible, setIsLoginPopupVisible] = useState(false); // State to control popup visibility
+  const [isRegisterPopupVisible, setIsRegisterPopupVisible] = useState(false); // State to control popup visibility
 
-  const handleLogin = (event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
-    setIsAuthenticated(true);
-    setIsPopupVisible(false); // Close the popup after successful login
+  
+    const username = loginRef.current.value;
+    const password = passwordRef.current.value;
+  
+    try {
+      // Construct the URL with query parameters
+      const url = `https://localhost:7108/api/users/login?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
+  
+      const response = await fetch(url, {
+        method: 'POST', // Use GET if the service expects the credentials in the URL
+      });
+  
+      if (!response.ok) {
+        throw new Error('Login failed');
+      }
+  
+      const data = await response.json();
+  
+      // Handle successful login
+      if (data != "") {
+        setIsAuthenticated(true); // Set authenticated state
+        setIsLoginPopupVisible(false); // Close the popup
+      } else {
+        alert('Invalid username or password');
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('Something went wrong. Please try again later.');
+    }
   };
+  
 
   const handleOpenPopup = () => {
-    setIsPopupVisible(true); // Open the popup when Sign In or Create Account is clicked
+    setIsLoginPopupVisible(true); // Open the popup when Sign In or Create Account is clicked
   };
 
   const handleClosePopup = () => {
-    setIsPopupVisible(false); // Close the popup
+    setIsLoginPopupVisible(false); // Close the popup
   };
 
   const loginRef = useRef(null);
@@ -110,7 +139,7 @@ function LoginPage({ setIsAuthenticated }) {
         </div>
       </div>
 
-      {isPopupVisible && (
+      {isLoginPopupVisible && (
         <div className="popup">
           <div className="popup__content">
             <button className="popup__closeBtn" onClick={handleClosePopup}>
