@@ -3,7 +3,12 @@
   }
   @font-face {
     font-family: 'Chirp Regular';
-    src: url('../fonts/Chirp-Regular.80fda27a.ttf') format('truetype');
+    src: url('../fonts/Chirp-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Chirp Bold';
+    src: url('../fonts/Chirp-Bold.ttf') format('truetype');
   }
   .widgets__input {
     display: flex;
@@ -30,7 +35,7 @@
 
   @font-face {
     font-family: 'Chirp Regular';
-    src: url('../fonts/Chirp-Regular.80fda27a.ttf') format('truetype');
+    src: url('../fonts/Chirp-Regular.ttf') format('truetype');
   }
   .widgets__searchIcon {
     color: gray;
@@ -49,9 +54,9 @@
 
   
   .widgets__widgetContainer > h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 800;
-    font-family: "Chirp-Regular";
+    font-family: "Chirp Bold";
     margin-top: 12px;
     margin-left: 16px;
     margin-right: 16px;

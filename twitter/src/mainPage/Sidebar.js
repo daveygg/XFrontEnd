@@ -11,6 +11,7 @@ import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import { Button } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
+import "../fonts/Chirp-Regular.ttf";
 
 
 function Sidebar() {

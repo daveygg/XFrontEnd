@@ -22,6 +22,11 @@ function TweetBox({ reloadParent }) {
   const [selectedFile, setSelectedFile] = useState();
   const [value, setTweetMessage] = useState("");
   const hiddenFileInput = useRef(null);
+  const expandingTextBoxRef = useRef(null);
+
+  const handleClearText = () => {
+    expandingTextBoxRef.current.resetText();
+  };
 
   const handleTextChange = (newValue) => {
     setTweetMessage(newValue);
@@ -51,6 +56,8 @@ function TweetBox({ reloadParent }) {
       .request(config)
       .then((response) => {
         console.log(response.data.message);
+        setTweetMessage(null);
+        handleClearText();
         reloadParent();
 
       })
@@ -92,7 +99,7 @@ function TweetBox({ reloadParent }) {
                 />
               </div> */}
               {/* const [value, setTweetMessage] = useState(""); */}
-              <ExpandingTextBox onTextChange={handleTextChange} />
+              <ExpandingTextBox onTextChange={handleTextChange} ref={expandingTextBoxRef} />
           </div>
           <div className="tweetBoxButtons">
             <div className="tweetBoxButtonsIcons">

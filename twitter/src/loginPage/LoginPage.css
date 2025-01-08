@@ -26,7 +26,7 @@
 @font-face {
     font-family: "Chirp-Regular";
     src: local("Chirp-Regular.80fda27a"),
-      url("../fonts/Chirp-Regular.80fda27a.ttf") format("truetype");
+      url("../fonts/Chirp-Regular.ttf") format("truetype");
   }
 
 .loginPage__xIcon {

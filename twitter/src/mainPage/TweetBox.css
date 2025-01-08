@@ -69,10 +69,10 @@
     font-weight: 50 !important;
   }
   .tweetBox__tweetButton {
-    background-color: var(--twitter-color) !important;
+    background-color:rgb(239, 243, 244) !important;
     border: none !important;
-    color: white !important;
-    font-weight: 700 !important;
+    color: black !important;
+    font-weight: 900 !important;
     text-transform: inherit !important;
     border-radius: 30px !important;
     width: 80px;
@@ -82,5 +82,5 @@
     font: "Chirp Regular" !important;
   }
   .tweetBox__tweetButton:hover{
-    background-color: rgb(26,140,216) !important;
+    background-color: rgb(220, 224, 225) !important;
   }

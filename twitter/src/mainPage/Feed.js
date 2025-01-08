@@ -18,8 +18,8 @@ function Feed() {
       };
       const response = await axios(config);
       const fetchedPosts = response.data;
-      console.log('fetchedPosts:', fetchedPosts);
-      setPosts(fetchedPosts);
+      const sortedPosts = fetchedPosts.sort((a, b) => new Date(b.dateCreated) - new Date(a.dateCreated));
+      setPosts(sortedPosts);
     } catch (error) {
       console.error('Error fetching posts:', error);
     }

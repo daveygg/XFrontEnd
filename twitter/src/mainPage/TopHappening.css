@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Chirp Regular';
-    src: url('../fonts/Chirp-Regular.80fda27a.ttf') format('truetype');
+    src: url('../fonts/Chirp-Regular.ttf') format('truetype');
   }
 .topHappening {
     display: flex;

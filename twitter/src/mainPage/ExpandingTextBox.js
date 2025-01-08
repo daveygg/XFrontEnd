@@ -9,6 +9,10 @@ const ExpandingTextBox = ({ onTextChange }) => {
     onTextChange(event.target.value);
   };
 
+  const resetText = () => {
+    setValue('');
+  }
+
   useEffect(() => {
     const textarea = document.querySelector('.expanding-textbox textarea');
     textarea.style.height = '0px';

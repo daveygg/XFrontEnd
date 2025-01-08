@@ -3,7 +3,12 @@
 }
 @font-face {
   font-family: 'Chirp Regular';
-  src: url('./fonts/Chirp-Regular.80fda27a.ttf') format('truetype');
+  src: url('./fonts/Chirp-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Chirp Bold';
+  src: url('./fonts/Chirp-Bold.ttf') format('truetype');
 }
 body {
   margin: 0;

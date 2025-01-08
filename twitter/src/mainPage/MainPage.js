@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainPage.css";
-import "../fonts/Chirp-Regular.80fda27a.ttf";
+import "../fonts/Chirp-Regular.ttf";
 import Sidebar from "./Sidebar";
 import Feed from './Feed';
 import Widgets from "./Widgets";
