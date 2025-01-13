@@ -37,7 +37,7 @@ const Post = forwardRef(
             <div className="post__headerDescription">
               <p>{text}</p>
             </div>
-            <img src={`https://localhost:7108/api/files/${image}`} alt="" />
+            {image && <img src={`https://localhost:7108/api/files/${image}`} alt="Uploaded" />}
             <div className="post__footer">
               <div className="commentButtonContainer">
                 <ChatBubbleOutlineIcon

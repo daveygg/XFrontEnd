@@ -25,10 +25,19 @@
     transition-duration: 0.1s;
     background-color: rgb(220, 224, 225) !important;
 }
+
+.sidebar__xIcon:hover {
+    background-color: #222222;    
+    transition: color 100ms ease-out;
+}
 .sidebar__xIcon {
     font-size: 30px !important;
-    margin-left: 20px !important;
+    margin-left: 30px !important;
     margin-bottom: 20px !important;
+    border-radius: 50% !important;
+    overflow: visible !important;
+    padding: 10px !important;
+    cursor: pointer !important;
 }
 
 .sidebar__xIconContainer {

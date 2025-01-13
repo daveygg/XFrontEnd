@@ -34,7 +34,8 @@ function Feed() {
   return (
     <div className="feed">
       <div className="feed__header">
-        <h2>Home</h2>
+        <h2>For You</h2>
+        <h2>Following</h2>
       </div>
       <TweetBox reloadParent={fetchData}/>
       {posts.map((post) => (

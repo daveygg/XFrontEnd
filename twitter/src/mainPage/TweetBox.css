@@ -35,7 +35,6 @@
     padding-top: 20px;
     padding-right: 20px;
     border-bottom: 1px solid var(--twitter-background);
-    padding-bottom: 20px;
     margin-right: 10px;
   }
   .tweetBoxInputStuff {
@@ -83,4 +82,38 @@
   }
   .tweetBox__tweetButton:hover{
     background-color: rgb(220, 224, 225) !important;
+  }
+  .expanding-textbox {
+    position: relative;
+    display: flex;    
+  }
+  
+  .expanding-textbox textarea {
+    width: 100%;
+    border: none;
+    padding: 5px;
+    font-family: inherit;
+    resize: none;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: width 0.1s ease-in-out;
+    line-height: 24px;
+    font-size: 20px;
+    background-color: black !important;
+    color: white;
+  }
+  
+  .expanding-textbox textarea:focus {
+    outline: none;
+  }
+  
+  .expanding-textbox textarea::-webkit-scrollbar {
+    display: none;
+  }
+
+  .expanding-textbox textarea::placeholder {
+    font-size: 20px;
+    font-weight: 400;
+    color: gray;
+    line-height: 24px;
   }

@@ -1,11 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./TweetBox.css";
 import { Avatar, Button, Hidden, responsiveFontSizes } from "@mui/material";
-import db from "./Firebase";
-import { setDoc, doc, collection } from "firebase/firestore";
 import axios from "axios";
 import InsertPhotoIcon from "@mui/icons-material/InsertPhoto";
-import ExpandingTextBox from "./ExpandingTextBox";
 import GifIcon from "@mui/icons-material/Gif";
 import BallotIcon from "@mui/icons-material/Ballot";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
@@ -22,11 +19,7 @@ function TweetBox({ reloadParent }) {
   const [selectedFile, setSelectedFile] = useState();
   const [value, setTweetMessage] = useState("");
   const hiddenFileInput = useRef(null);
-  const expandingTextBoxRef = useRef(null);
 
-  const handleClearText = () => {
-    expandingTextBoxRef.current.resetText();
-  };
 
   const handleTextChange = (newValue) => {
     setTweetMessage(newValue);
@@ -56,8 +49,7 @@ function TweetBox({ reloadParent }) {
       .request(config)
       .then((response) => {
         console.log(response.data.message);
-        setTweetMessage(null);
-        handleClearText();
+        setTweetMessage("");
         reloadParent();
 
       })
@@ -90,16 +82,12 @@ function TweetBox({ reloadParent }) {
           <Avatar id="avatar" src="https://picsum.photos/200/300?random=1" />
         </div>
         <div className="tweetBoxInputStuff">
-          <div className="tweetBox__input">
-              {/* <div className="expanding-textbox">
-                <textarea
-                  value={value}
-                  onChange={handleChange}
-                  placeholder="What is happening?!"
-                />
-              </div> */}
-              {/* const [value, setTweetMessage] = useState(""); */}
-              <ExpandingTextBox onTextChange={handleTextChange} ref={expandingTextBoxRef} />
+          <div className="tweetBox__input">              
+          <div className="expanding-textbox">
+            <textarea value={value}
+            placeholder='What is happening?!'
+            onChange={(e) => handleTextChange(e.target.value)} />
+          </div>
           </div>
           <div className="tweetBoxButtons">
             <div className="tweetBoxButtonsIcons">
