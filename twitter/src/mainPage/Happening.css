@@ -10,8 +10,8 @@
     margin-top: 10px;
 }
 .happening:hover {
-    transition-duration: 0.1s;
-    background-color: #111111;
+    transition: color 150ms ease-out;
+    background-color: #EEEEEE;
     
 }
 .happeningTopic {
@@ -35,11 +35,15 @@
     justify-content: center;
     align-items: center;
 }
-.buttonContainer:hover .moreButton {
-    transition-duration: 0.1s;
+.buttonContainer:hover .moreButtonHappening {
+    transition: color 150ms ease-out;
     color: rgba(29, 155, 240, 1);
     background-color: rgba(29, 155, 240, 0.1);
     border-radius: 50%;
+}
+.moreButtonHappening{
+    padding: 5px;
+    margin-right: 5px;
 }
 .amountOfInteractions {
     margin-left: 10px;

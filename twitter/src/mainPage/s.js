@@ -26,31 +26,33 @@ function Feed() {
     } catch (error) {
       console.error("Error fetching posts:", error);
     }
-  }, []);
+  }, []); // Empty dependency array to prevent unnecessary re-fetches
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]); // Only re-fetch data when fetchData changes
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
 
-
-
   return (
     <div className="feed">
       <div className="feed__header">
-        <div className="for_you" onClick={() => handleTabClick("for_you")}>
-          <div className="anuvadiv">
+        <div className="tabs">
+          <div
+            className={`tab ${activeTab === "for_you" ? "active" : ""}`}
+            onClick={() => handleTabClick("for_you")}
+          >
             <div className="for_you_text">For You</div>
-            { activeTab === "for_you" &&  <div className="for_you_blue_bar"></div> }
+            {activeTab === "for_you" && <div className="for_you_blue_bar"></div>}
           </div>
-        </div>
-        <div className="following" onClick={() => handleTabClick("following")}>
-        <div className="anuvadiv">
-          <div className="following_text" >Following</div>
-          { activeTab === "following" && <div className="following_blue_bar"></div>}
+          <div
+            className={`tab ${activeTab === "following" ? "active" : ""}`}
+            onClick={() => handleTabClick("following")}
+          >
+            <div className="following_text">Following</div>
+            {activeTab === "following" && <div className="following_blue_bar"></div>}
           </div>
         </div>
       </div>

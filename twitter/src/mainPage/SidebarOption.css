@@ -9,13 +9,14 @@
     align-items: center;
     cursor: pointer;
     border-radius: 30px;
-    background-color: black;
+    background-color: white;
+    color: black;
 }
 
 .sidebarOption:hover {
     /*background-color: #e8f5fe;*/
-    background-color: #222222;    
-    transition: color 100ms ease-out;
+    background-color: #EEEEEE;    
+    transition: color 150ms ease-out;
 }
 
 .sidebarOption > .MuiSvgIcon-root {

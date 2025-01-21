@@ -5,8 +5,8 @@ import XIcon from "@mui/icons-material/X";
 import { Button } from "@mui/material";
 
 function LoginPage({ setIsAuthenticated }) {
-  const [isLoginPopupVisible, setIsLoginPopupVisible] = useState(false); // State to control popup visibility
-  const [isRegisterPopupVisible, setIsRegisterPopupVisible] = useState(false); // State to control popup visibility
+  const [isLoginPopupVisible, setIsLoginPopupVisible] = useState(false);
+  const [isRegisterPopupVisible, setIsRegisterPopupVisible] = useState(false);
 
   const handleLogin = async (event) => {
     event.preventDefault();
@@ -305,7 +305,7 @@ function LoginPage({ setIsAuthenticated }) {
                   required
                 />
                 <Button type="submit" className="popup__submitBtn">
-                  Login
+                  Register
                 </Button>
               </form>
             </div>

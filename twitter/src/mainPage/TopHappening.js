@@ -10,7 +10,7 @@ function TopHappening({ category, topic, amountOfInteractions, image }) {
           <div className="topHappeningCategory">
             {category}
             <div className="buttonContainer">
-              <MoreHorizIcon className="moreButton" />
+              <MoreHorizIcon className="moreButtonTopHappening" />
             </div>
           </div>
           <div className="topHappeningTopic">{topic}</div>

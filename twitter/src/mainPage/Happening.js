@@ -9,7 +9,7 @@ function Happening({ category, topic, amountOfInteractions }) {
           <div className="happeningCategory">
             {category}
             <div className="buttonContainer">
-              <MoreHorizIcon className="moreButton" />
+              <MoreHorizIcon className="moreButtonHappening" />
             </div>
           </div>
           <div className="happeningTopic">{topic}</div>

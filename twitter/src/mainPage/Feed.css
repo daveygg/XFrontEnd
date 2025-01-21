@@ -21,15 +21,20 @@
   .feed__header {
     position: sticky;
     top: 0;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     z-index: 100;
     border-top: 1px solid var(--twitter-background);
     border-bottom: 1px solid var(--twitter-background);
-    padding: 15px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .feed__header :hover{
+    background-color: #EEEEEE;
+    cursor: pointer;
+    
   }
   @font-face {
     font-family: "Chirp-Regular";
@@ -40,4 +45,72 @@
     font-size: 20px;
     font-weight: 800;
     font-family: 'Chirp-Regular';
+  }
+  .for_you_text{
+    font-family: 'Chirp-Regular';
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1;
+  }
+  .following_blue_bar{
+    background-color: var(--twitter-color);
+    flex: 0.1;
+    flex-direction: row;
+    border-radius: 2px;
+    border-color: var(--twitter-color);
+    border-width: 2px;
+  }
+  .for_you_blue_bar{
+    background-color: var(--twitter-color);
+    flex: 0.1;
+    flex-direction: row;
+    border-radius: 2px;
+    border-color: var(--twitter-color);
+    border-width: 2px;
+  }
+  .for_you{
+    flex-direction: row;
+    min-height: 53px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  .anuvadiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .following_text{
+    font-family: 'Chirp-Regular';
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1;
+  }
+  .following{
+    flex-direction: row;
+    min-height: 53px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center vertically */
+    padding: 10px; /* Add some padding for spacing */
+  }
+  
+  .section {
+    flex-grow: 1; /* Make sections grow to fill available space */
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .indicator {
+    width: 50px; /* Adjust width as needed */
+    height: 4px;
+    background-color: blue;
+    margin: 0 10px; /* Add some margin for spacing */
   }

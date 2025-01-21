@@ -44,13 +44,13 @@ function Widgets() {
     if (focused) {
       searchIconRef.current.style.color = 'rgba(29, 155, 240, 1)';
       inputWrapperRef.current.style.border = '1px solid rgba(29, 155, 240, 1)';
-      inputWrapperRef.current.style.backgroundColor = 'black';
-      inputRef.current.style.backgroundColor = 'black';
+      inputWrapperRef.current.style.backgroundColor = 'white';
+      inputRef.current.style.backgroundColor = 'white';
     } else {
       searchIconRef.current.style.color = 'gray';
-      inputWrapperRef.current.style.border = 'none';
-      inputWrapperRef.current.style.backgroundColor = 'rgb(47, 51, 54)';
-      inputRef.current.style.backgroundColor = 'rgb(47, 51, 54)';
+      inputWrapperRef.current.style.border = '1px solid rgb(118, 118, 118)';
+      inputWrapperRef.current.style.backgroundColor = 'white';
+      inputRef.current.style.backgroundColor = 'white';
     }
   }, [focused]);
 
