@@ -94,11 +94,12 @@ function LoginPage({ setIsAuthenticated }) {
   const registerUsernameRef = useRef(null);
   const registerPasswordRef = useRef(null);
 
-  const [loginFocused, setLoginFocused] = useState(false);
-  const [passwordFocused, setPasswordFocused] = useState(false);
+  const [loginFocused, setLoginFocused] = useState(null);
+  const [passwordFocused, setPasswordFocused] = useState(null);
 
   useEffect(() => {
-    const loginElement = loginRef.current;
+    if(isLoginPopupVisible){
+      const loginElement = loginRef.current;
   
     if (loginElement) {
       const handleFocus = () => {
@@ -117,7 +118,66 @@ function LoginPage({ setIsAuthenticated }) {
         loginElement.removeEventListener("blur", handleBlur);
       };
     }
-  }, []);
+    
+    }
+  }, [isLoginPopupVisible]);
+
+  useEffect(() => {
+    if(isLoginPopupVisible){
+      const passwordElement = passwordRef.current;
+  
+    if (passwordElement) {
+      const handlePasswordFocus = () => {
+        setPasswordFocused(true);
+      };
+  
+      const handlePasswordBlur = () => {
+        setPasswordFocused(false);
+      };
+  
+      passwordElement.addEventListener("focus", handlePasswordFocus);
+      passwordElement.addEventListener("blur", handlePasswordBlur);
+  
+      return () => {
+        passwordElement.removeEventListener("focus", handlePasswordFocus);
+        passwordElement.removeEventListener("blur", handlePasswordBlur);
+      };
+    }
+    
+    }
+  }, [isLoginPopupVisible]);
+
+  useEffect(() => {
+      
+      if (loginFocused === true) {
+        loginRef.current.style.color = 'rgba(29, 155, 240, 1)';
+        loginRef.current.style.outline = '1px solid rgba(29, 155, 240, 1)';
+        loginRef.current.style.border = '1px solid rgba(29, 155, 240, 1)';
+        loginRef.current.style.backgroundColor = 'black';
+      } else if (loginFocused == false) {
+        loginRef.current.style.color = 'gray';
+        loginRef.current.style.outline = '0px solid rgb(118, 118, 118)';
+        loginRef.current.style.border = '1px solid rgb(118, 118, 118)';
+        loginRef.current.style.backgroundColor = 'black';
+        
+      }
+    }, [loginFocused]);
+
+    useEffect(() => {
+      
+      if (passwordFocused === true) {
+        passwordRef.current.style.color = 'rgba(29, 155, 240, 1)';
+        passwordRef.current.style.outline = '1px solid rgba(29, 155, 240, 1)';
+        passwordRef.current.style.border = '1px solid rgba(29, 155, 240, 1)';
+        passwordRef.current.style.backgroundColor = 'black';
+      } else if (passwordFocused == false) {
+        passwordRef.current.style.color = 'gray';
+        passwordRef.current.style.outline = '0px solid rgb(118, 118, 118)';
+        passwordRef.current.style.border = '1px solid rgb(118, 118, 118)';
+        passwordRef.current.style.backgroundColor = 'black';
+        
+      }
+    }, [passwordFocused]);
   
 
   return (
@@ -176,6 +236,14 @@ function LoginPage({ setIsAuthenticated }) {
           <Button onClick={handleOpenLoginPopup} className="loginPage__signInBtn">
             Sign in
           </Button>
+          <div class="input-container">
+  <input type="text" id="name" placeholder=" " required />
+  <label for="name">Username</label>
+</div>
+<div class="input-container">
+  <input type="password" id="password" placeholder=" " required />
+  <label for="name">Password</label>
+</div>
         </div>
       </div>
 

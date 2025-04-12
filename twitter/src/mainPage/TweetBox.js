@@ -19,10 +19,15 @@ function TweetBox({ reloadParent }) {
   const [selectedFile, setSelectedFile] = useState();
   const [value, setTweetMessage] = useState("");
   const hiddenFileInput = useRef(null);
+  const textAreaRef = useRef(null);
 
 
   const handleTextChange = (newValue) => {
     setTweetMessage(newValue);
+    if (textAreaRef.current) {
+      textAreaRef.current.style.height = '0px';
+      textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`;
+    }
   };
 
   const sendTweet = (event) => {
@@ -50,6 +55,10 @@ function TweetBox({ reloadParent }) {
       .then((response) => {
         console.log(response.data.message);
         setTweetMessage("");
+        setSelectedFile(null);
+        if (textAreaRef.current) { 
+          textAreaRef.current.style.height = '34px';
+        }
         reloadParent();
 
       })
@@ -85,6 +94,7 @@ function TweetBox({ reloadParent }) {
           <div className="tweetBox__input">              
           <div className="expanding-textbox">
             <textarea value={value}
+            ref={textAreaRef}
             placeholder='What is happening?!'
             onChange={(e) => handleTextChange(e.target.value)} />
           </div>
